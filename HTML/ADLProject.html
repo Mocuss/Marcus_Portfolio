@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Classifier</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="ADL_Hero fade-in-section">
+            <nav>
+                <div class="logoimage">
+                    <h1>
+                        <span>Marcus</span>
+                        <br>
+                        <span>Teo</span>
+                    </h1>
+                </div>
+                <ul class="CTA">
+                    <li><a href="../HTML/Main.html" title="Go to Home page"><b>Home</b></a></li>
+                    <li><a href="../HTML/Main.html#About" title="Go to About page"><b>About</b></a></li>
+                    <li><a href="../HTML/Main.html#Myskills" title="Go to My Skills page"><b>Skills</b></a></li>
+                    <li><a href="../HTML/Main.html#Projects" title="Go to My Projects page"><b>Project</b></a></li>
+                    <li><a href="../HTML/Main.html#Contact" title="Go to My Contacts page"><b>Contact</b></a></li>
+                </ul>
+            </nav>
+
+            <div class="ADLherocontent">
+                <h1 class="ADLHerotext fade-in-section">
+                    <span>Transport Classifier</span>
+                </h1>
+                <img class="ADLprofileimage" src="../Images/Deep Learning Project.png">
+            </div> 
+            <div class="linebuttons">
+                <a href="Main.html#Hero" class="buttonline" id="line-home"></a>
+                <a href="#About" class="buttonline" id="line-about"></a>
+                <a href="#Myskills" class="buttonline" id="line-skills"></a>
+                <a href="#Projects" class="buttonline" id="line-projects"></a>
+                <a href="#Contact" class="buttonline" id="line-contact"></a>
+            </div>
+        </div>
+        <div class="ADLmaincontent">
+            <div class="ADLIntro fade-in-section">
+                <p>
+                    For this solo project, my role was to create create 2 models, CNN and 
+                    transfer learning models <br> to classify images, 
+                    then compare the two models.
+                </p>
+                <p>
+                    I was provided 7.5k pre-labelled images, divided equally among 3 classes. 
+                    <br>The 3 classes were:
+                </p>
+                <ul>
+                    <li>Airplane</li>
+                    <li>Truck</li>
+                    <li>Automobile</li>
+                </ul>
+                <br>
+                <div class="sidebyside exampleimg">
+                <p>Images from the dataset were heavily modified,
+                    <br> only providing 32 by 32 pixels.</p>
+                <img src="../Images/ADL/ExampleImage.png">
+                </div>
+                <p>Dropout, regularization and Data Augmentation were used to prevent overfitting</p>
+            </div>
+            <h2 fade-in-section><u>CNN Model</u></h2>
+            <div class="ADLCNN fade-in-section">
+                <div class="ADLResults">
+                    <p>The following are results of my CNN model.</p>
+                    <ul class="CNNResults">
+                        <li><span class="ADLLabel">Train Accuracy:</span><b>0.9232</b></li>
+                        <li><span class="ADLLabel">Test Accuracy:</span><b>0.9060</b> </li>
+                        <li><span class="ADLLabel">Train Loss:</span> <b>0.2175</b></li>
+                        <li><span class="ADLLabel">Test Loss:</span><b>0.2494</b></li>
+                        <li><span class="ADLLabel">F1 Score:</span><b>0.91</b></li>
+                    </ul>
+                </div>
+                <div class="Imgflex">
+                    <div class="ImgOverText">
+                        <img src="../Images/ADL/CNN Matrix.png">
+                        <p>Confusion Matrix of my CNN model</p>
+                    </div>
+                    <div class="ImgOverText">
+                        <img src="../Images/ADL/CNNCurves.png">
+                        <p>My train and test Accuracy and Loss Curve</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ADLTrans fade-in-section">
+                <h2><u>Transfer Learning Model</u></h2>
+                <div>
+                    <p>I first tested out different models to see which is best for my dataset.</p>
+                    <img>
+                </div>
+                <div>
+                    <p>After selecting the best model, I fined tuned my model 
+                        <br>
+                        by unfreezing everything but the first 15 layers.</p>
+                    <img>
+                </div>
+                <p>The following are results of my Transfer Learning model.</p>
+                <div class="ADLResults">
+                    <ul>
+                        <li><span class="ADLLabel">Train Accuracy:</span><b>0.9945</b></li>
+                        <li><span class="ADLLabel">Test Accuracy:</span><b>0.9707</b></li>
+                        <li><span class="ADLLabel">Train Loss:</span> <b>0.0187</b></li>
+                        <li><span class="ADLLabel">Test Loss:</span><b>0.0859</b></li>
+                        <li><span class="ADLLabel">F1 Score:</span><b>0.9700</b></li>
+                    </ul>
+                </div>
+                <div class="Imgflex">
+                    <div class="ImgOverText">
+                        <img src="../Images/ADL/Translearning matrix.png">
+                        <p>Confusion Matrix of my model.</p>
+                    </div>
+                    <div class="ImgOverText">
+                        <img src="../Images/ADL/Translearning curves.png">
+                        <p>Train and Test accuracy and Loss Curve.</p> 
+                        <br>
+                        <p> *Although the curve looks like it is overfitted, 
+                            do note that the axis values are extremely small, 
+                            <br>
+                            only a 0.02 difference in accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Downloadmycode"><p>To learn more on how I did my code, please download my code!</p></div>
+        <div class="projectdownload">
+            <a href="https://github.com/Mocuss/Transport-Classifier">Click here to download my code</a>
+        </div>
+        <hr>
+        <div id="Projects">
+            <h1>Check out my other projects!</h1>
+            <div class="slideshowcontainer">
+                <div class="mySlides fade">
+                  <h2>Transport Classifier</h2>
+                  <div class="slidescontent">
+                    <img src="../Images/Deep Learning Project.png">
+                    <ul class="slideswords">
+                        <li>
+                            My task was to create a transport classifier using 2 models- A CNN model and a Transfer Learning model.
+                        </li>
+                        <br>
+                        <li>
+                            We were given a dataset of 7500 images, with 3 classes- Automobiles, Airplanes and Trucks. 
+                        </li>
+                        <br>
+                        <li>
+                            I was able to get a train and test accuracy of 0.9232 and 0.9060 for my CNN model and 0.9945 and 0.9707 for my transfer learning model.
+                        </li>
+                    </ul>
+                  </div>
+                  <a href="ADLProject.html">Learn More</a>
+                </div>
+              
+                <div class="mySlides fade">
+                    <h2>Singapore's Tourism Analysis</h2>
+                    <div class="slidescontent">
+                        <ul class="slideswords">
+                            <li>
+                                Our task was to identify factors that will attract more tourists to Singapore, therefore increasing tourism reciept in Singapore.
+                            </li>
+                            <br>
+                            <li>
+                                My role was to create dashboards for visualisation, along with data analysis and report.
+                            </li>
+                        </ul>
+                      <img src="../Images/DPV Project.png">
+                    </div>
+                    <a href="DPV Project.html">Learn More</a>
+                </div>
+              
+                <div class="mySlides fade">
+                    <h2>Leaf Sense</h2>
+                    <div class="slidescontent">
+                      <img src="../Images/CV Project.png">
+                      <ul class="slideswords">
+                          <li>
+                              My group's goal was to create a computer vision model to identify defects in leaves.
+                          </li>
+                          <br>
+                          <li>
+                              While I helped out for the large majority of the project, such as in slides and model,
+                               my main task was to create a leaf detection model, separating the leaves from the background. 
+                          </li>
+                          <br>
+                          <li>
+                              By accomplishing the task, I was able to improve our model accuracy from 90% to 99.999%.
+                          </li>
+                      </ul>
+                    </div>
+                    <a href="CVProject.html">Learn More</a>
+                  </div>
+                <a class="prev" onclick="plusSlides(-1)"><</a>
+                <a class="next" onclick="plusSlides(1)">></a>
+                
+            </div>
+              <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                }
+                </script>
+        </div>
+        <hr>
+        <div id="Contact">
+            <h1>Contact</h1>
+            <h3>Get in touch with me here!</h3>
+            <div class='contactinfo'>
+                <div>
+                    <h4>8787 0079</h4>
+                </div>
+                <div>
+                    <h4>marcusteomingxuan@gmail.com</h4>
+                </div>
+                <div>
+                    <h4>230208B@mymail.nyp.edu.sg</h4>
+                </div>
+            </div>
+            <h3>Alternatively, check out my socials!</h3>
+            <div class="socialicons">
+                <a href="https://www.linkedin.com/in/marcus-teo-36866230a"><img src="../Images/LinkedIn_placeholder.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/markipen?igsh=dmpwemRheXR6bzk0&utm_source=qr"><img src="../Images/instalogo.png" alt="Instagram"></a>
+                <a href="https://github.com/Mocuss"><img src="../Images/githublogo.png" alt="GitHub"></a>
+            </div>
+            <p>Coded and designed by Marcus Teo</p>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const sections = document.querySelectorAll(".fade-in-section");
+      
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+              if (entry.isIntersecting) {
+                // Optional: compute delay based on index in DOM
+                const delay = index * 150; // in milliseconds
+                entry.target.style.transitionDelay = `${delay}ms`;
+                entry.target.classList.add("is-visible");
+              }
+            });
+          }, { threshold: 0.1 });
+      
+          sections.forEach((section) => {
+            observer.observe(section);
+          });
+        });
+      </script>
+</body>
+</html>
