@@ -1,0 +1,705 @@
+*{margin: 0; padding: 0;}
+nav a:link{color: black;}
+#Hero nav{
+    background-color: #f6f6f6;
+    display: flex;
+    z-index: 2;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 1600px;
+}
+#Hero nav a:visited{
+    color: maroon;
+}
+#Hero nav span{
+    font-size: 30px;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 10px;
+}
+nav a:hover{color:#8497bc;}
+#Hero  nav a:hover:visited{color:#e70448;}
+a{text-decoration: none;}
+nav ul{
+    display:flex;
+    padding-top: 20px;
+    justify-content: flex-end;
+    list-style-type: none;
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 250px;
+    }
+.socialicons{
+    display: flex;
+}
+.socialicons a{
+    padding-left: 20px;
+}
+.socialicons img{
+    height:75px;
+    width:75px;
+    object-fit: cover;
+    
+}
+.CTA li{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+.herocontent{
+    display: flex;
+    margin-top: 75px;
+    flex-direction: row; /* horizontal layout */
+    justify-content: space-between; /* space between left and right */
+    background-color: #f6f6f6;
+    align-items: center;
+    margin-bottom: 25px;
+}
+#Hero {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column; /* Make nav stack above content */
+    scroll-snap-align: start;
+    height: 900px;
+  }
+.HeroLeft{
+    flex: 1;
+    text-align: left;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+.HeroLeft h1{
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 100px;
+  margin-bottom: 1rem;
+    text-align: left;
+}
+.HeroLeft hr{
+    width: 120%;
+    margin: 10px 0;
+    border: 2px solid black;
+    justify-self: left;
+}
+.HeroLeft h3 {
+    font-size: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    justify-self:left;
+}
+.HeroLeft .buttons{
+    margin-top: 50px;
+    background-color: #b4c5e4;
+    border-radius: 40px;
+    width: 600px;
+    height: 75px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+.HeroLeft button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+.HeroRight{
+padding: 0px;
+
+margin-top: 40px;
+margin-left: 100px;
+margin-right: 100px;
+flex:1;
+justify-content: center;
+justify-self: center;
+width: 600px;
+height: 600px;
+border-radius: 100%;
+overflow:hidden;
+box-shadow: 50px 50px 0px rgba(0,0,0,0.2);
+}
+
+.profileimage {
+    width:100%;
+  height: auto;
+  object-fit:cover;
+}
+
+.scrollindicator {
+  position: absolute;
+  left: 100px;
+  bottom: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollindicator .text {
+writing-mode: vertical-rl;
+transform: rotate(0deg);
+font-family: 'JetBrains Mono', monospace;
+font-size: 20px;
+letter-spacing: 2px;
+margin-bottom: 5px;
+color: black;
+}
+
+.scrollindicator .line {
+width: 2px;
+height: 200px;
+background-color: #000;
+margin: 10px auto;
+}
+.linebuttons {
+    position: absolute;
+    bottom:150px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 10;
+  }
+.nav-line {
+    display: block;
+    width: 75px;
+    height: 3px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav-line.active {
+    display: block;
+    width: 150px; 
+    height: 3px;
+background-color: #6f84ac;
+transition: width 0.3s ease;
+}
+html, body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    background-color: #f6f6f6;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+section {
+scroll-snap-align: start;
+height: 100vh;
+}
+.aboutbutton {
+    position:static;
+    left:800px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutbutton .text {
+font-family: 'JetBrains Mono', monospace;
+font-size: 20px;
+letter-spacing: 1px;
+color: black;
+}
+
+.aboutbutton .line {
+width: 2px;
+height: 50px;
+background-color: #000;
+margin: 10px auto;
+}
+.aboutbutton a{
+    color: #000;
+}
+
+.parallax {
+    background-image: url("../Images/IoT\ Project\ Image.jpg"); /* replace with your image path */
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+    height: 300px;
+}
+
+/* ABOUT PORTION*/
+
+#About{
+    padding-top: 100px;
+    background-color:#f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.AboutMe{
+    display: flex;
+}
+.AboutText{
+    flex: 1;
+    color: #000;
+}
+.AboutMe p{
+    font-family:Quicksand, sans-serif ;
+    width: 600px;
+    margin: 40px;
+    font-size: 20px
+}
+.AboutText h1{
+    font-size: 75px;
+    font-family:'JetBrains Mono', monospace;
+    justify-self: center;
+}
+.AboutMeImage {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-bottom: 10px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.15);
+}
+.Resumebutton {
+    display: inline-block;
+    background-color:  #6f84ac;
+    margin-left: 20px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .Resumebutton:hover {
+    background-color: #0056b3;
+  }
+  
+.CTAResume{
+    margin: 10px;
+    display: flex;
+}
+.CTAResume p{
+    font-size: 20px;
+}
+.fadein {
+    opacity: 0; 
+    animation: fadein 0.5s forwards; 
+    animation-delay: 0.2s;
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.fadein2 {
+    opacity: 0; 
+    animation: fadein 1s forwards; 
+    animation-delay: 0.5s;
+  }
+/* .fadein{
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fadeinvisible {
+opacity: 1;
+transform: none;
+} */
+#Myskills{
+    padding: 100px;
+    padding-left: 200px;
+    background-color: #f6f6f6;
+    padding-bottom: 200px;
+}
+#Myskills h1{
+    font-size: 100px;
+    font-family:'JetBrains Mono', monospace;
+    font-weight: 300;
+}
+.cardgrid {
+display: grid;
+height: auto;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+gap: 30px;
+padding: 30px;
+}
+.card img {
+background-color: #1A1F2F;
+width: 200px;
+height: 200px;
+color: white;
+border-radius: 100%;
+box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+transition: transform 0.3s ease;
+justify-content: center;
+justify-self: center;
+object-fit: cover;
+
+}
+.cardgrid h3{
+    font-size: 30px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.cardgrid p{
+    font-family:Quicksand, sans-serif ;
+}
+/* Project Page*/
+#Projects{
+    padding: 100px;
+    padding-left: 200px;
+    background-color: #f6f6f6;
+}
+.Projects{
+    padding: 100px;
+    padding-left: 200px;
+    background-color: #f6f6f6;
+}
+#Projects h1{
+    padding-bottom: 30px;
+    font-size: 90px;
+    font-family:'JetBrains Mono', monospace;
+    font-weight: 300;
+    justify-self: center;
+}
+.slideshowcontainer {
+position: relative;
+max-width: 1400px;
+height: auto;
+margin: 20px;
+}
+.slideshowcontainer a{
+    font-size: 40px;
+}
+.mySlides {
+display: none;
+background-color: #f7f2eb;
+height: auto;
+border-radius: 20px;
+border: #000 1px double;
+padding: 20px 50px;
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* X, Y, blur, color */
+}
+.mySlides h2{
+    font-size: 50px;
+    font-family:'Montserrat', sans-serif ;
+    font-weight: 400;
+    justify-self: center;
+}
+.slidescontent{
+    display: flex;
+    align-items: center; /* vertically align image and text */
+    justify-content: space-between; /* optional: center everything horizontally */
+    width: 100%;;
+}
+.slidescontent img{
+flex: 1;
+max-width: 40%; /* make sure the image fits nicely */
+height: auto; /* keep image proportions */
+padding: 20px;
+}
+.slidescontent .slideswords{
+    flex: 1;
+    padding: 20px;
+}
+.slidescontent li{
+    font-size: 25px;
+    font-family:Quicksand, sans-serif; 
+}
+.mySlides a{
+    background-color: #8497bc;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 300;
+    justify-content: center;
+}
+.prev, .next {
+cursor: pointer;
+position: relative;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: black;
+font-weight: bold;
+font-size: 24px;
+user-select: none;
+}
+
+.prev {
+left: 0;
+}
+
+.next {
+right: 0;
+}
+
+.fade {
+animation-name: fade;
+animation-duration: 1s;
+}
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+/* Contact Page*/
+#Contact{
+    padding: 100px;
+    padding-left: 200px;
+    background-color: #f6f6f6;
+}
+#Contact h1{
+    padding-bottom: 30px;
+    font-size: 120px;
+    font-family:'JetBrains Mono', monospace;
+    font-weight: 300;
+}
+#Contact h3{
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif ;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+#Contact h4{
+    font-size: 40px;
+    font-family: Quicksand, sans-serif;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+/* ADL*/
+.ADLherocontent{
+    position: relative;
+    margin-top: 20px;
+    background-color: #f6f6f6;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.ADLprofileimage{
+    filter: brightness(40%);
+    position: relative;
+    height: auto;
+    width:1600px;
+    height: 500px;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.ADL_Hero nav{
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    width: 1600px;
+}
+.ADL_Hero span{
+    font-size: 30px;
+    font-family: 'JetBrains Mono', monospace;
+}
+.ADLResults h3{
+    font-size: 80px;
+}
+.ADLResults p{
+    font-size: 30px;
+}
+.ADLResults ul {
+    font-size:60px ;
+    justify-self: center;
+    list-style-type: disc;
+    padding: 50px;
+    
+}
+.ADLResults li{
+    font-size: 50px;
+    display: flex;
+
+}
+.ImgOverText{
+    display: flex;
+    flex: 0 1 45%; /* two per row */
+    flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ImgOverText img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+.Imgflex img{
+    max-width: 70%;
+}
+.exampleimg img{
+    max-width: 20%;
+}
+.Imgflex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px;
+}
+.ADLHerotext{
+    margin-left: 15%;
+    margin-top:10%;
+    z-index: 2;
+    position: absolute;
+    color: white;
+    justify-self: center;
+}
+.ADLHerotext span{
+    font-size: 100px;
+    font-family:'JetBrains Mono', monospace;
+    font-weight: 300;
+}
+.ADLmaincontent{
+    justify-content: center;
+    margin: 50px 200px;
+}
+.ADLmaincontent p{
+    font-family:Quicksand, sans-serif;
+    font-size: 25px;
+}
+.sidebyside p{
+    margin: 60px;
+}
+.sidebyside{
+    display: flex;
+    justify-content: center;
+}
+.ADLIntro ul{
+    display:flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 250px;
+    }
+.ADLIntro li{
+    padding-top:20px;
+    padding-right: 40px;
+}
+.projectdownload {
+    margin: 50px;
+    justify-self: center;
+    justify-content: center;
+}
+.projectdownload a{
+    font-size: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #b4c5e4;
+    border-radius: 20px;
+    color: #000;
+    padding: 20px;
+}
+.ADLLabel{
+    min-width: 600px;
+}
+.ADLResults li{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.ADLmaincontent h2{
+    font-size: 75px;
+    font-family:'Montserrat', sans-serif;
+    justify-self: center;
+    font-weight: 300;
+    padding: 20px;
+}
+.ADLTrans li img{
+    max-width: 60%;
+}
+.ADLTrans h3{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.OtherProjects h2{
+    font-size: 70px;
+    justify-self: center;
+    font-family:'JetBrains Mono', monospace;
+    font-weight:300 ;
+}
+
+
+/* DPV Project*/
+.DPVmaincontent{
+    justify-content: center;
+    justify-self: center;
+    margin: 50px 200px;
+}
+.DPVmaincontent p{
+    font-family:Quicksand, sans-serif;
+    font-size: 25px;
+}
+.DPVDataDictionaries ul{
+    display: grid; 
+    grid-template-columns: repeat(2, auto); 
+    gap: 10px;
+}
+.DPVDataDictionaries ul img {
+    max-width: 50%;
+}
+.DPVmaincontent h1{
+    font-size: 100px;
+    font-family:'JetBrains Mono', monospace;
+    justify-self: center;
+}
+.DPVmaincontent h2{
+    font-size: 75px;
+    font-family:'Montserrat', sans-serif;
+    justify-self: center;
+    font-weight: 300;
+}
+.DPVmaincontent li{
+    font-size: 25px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+  
+.fade-in-section.is-visible {
+opacity: 1;
+transform: none;
+}
+.Downloadmycode{
+    font-size: 20px;
+    font-family:'JetBrains Mono', monospace;
+    justify-self: center;
+    padding: 20px;
+}
