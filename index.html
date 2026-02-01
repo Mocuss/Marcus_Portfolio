@@ -14,8 +14,9 @@
         <div class="linebuttons">
             <a href="#Hero" class="nav-line" data-target="Hero"></a>
             <a href="#About" class="nav-line"  data-target="About"></a>
-            <a href="#Myskills" class="nav-line"  data-target="Myskills"></a>
+            <a href="#Skills" class="nav-line"  data-target="Skills"></a>
             <a href="#Projects" class="nav-line"  data-target="Projects"></a>
+            <a href="#Certifications" class="nav-line" data-target="Certifications"></a>
             <a href="#Contact" class="nav-line"  data-target="Contact"></a>
         </div>
         <section id="Hero" class="page-section fade-in-section">
@@ -30,8 +31,9 @@
                 <ul class="CTA">
                     <li><a href="#Hero" title="Go to Home page"><b>Home</b></a></li>
                     <li><a href="#About" title="Go to About page"><b>About</b></a></li>
-                    <li><a href="#Myskills" title="Go to My Skills page"><b>Skills</b></a></li>
+                    <li><a href="#Skills" title="Go to My Skills page"><b>Skills</b></a></li>
                     <li><a href="#Projects" title="Go to My Projects page"><b>Project</b></a></li>
+                    <li><a href="#Certifications" title="Go to My Certifications page"><b>Certifications</b></a></li>
                     <li><a href="#Contact" title="Go to My Contacts page"><b>Contact</b></a></li>
                 </ul>
             </nav>
@@ -59,7 +61,7 @@
                 </div>
 
                 <div class="HeroRight">
-                    <img class="profileimage" src="Images/ProfilePhoto.jpeg">
+                    <img class="profileimage" src="Images/Me.jpg">
                 </div>
             </div> 
                
@@ -75,13 +77,28 @@
         <hr>
         <section id="About" class="page-section fade-in-section">
             <div class="AboutMe">
-                <div>
-                    <img class="AboutMeImage" src="Images/About Me.jpg">
+                <div class="AboutCollage" aria-label="About photos collage">
+
+                <div class="collageImg img1">
+                    <img src="Images/Aboutme1.jpg" alt="Photo 1">
+                    <div class="polaroidCaption">My favorite photo of myself</div>
+                </div>
+
+                <div class="collageImg img2">
+                    <img src="Images/Aboutme2.jpeg" alt="Photo 2">
+                    <div class="polaroidCaption">Brunch with friends</div>
+                </div>
+
+                <div class="collageImg img3">
+                    <img src="Images/Aboutme3.jpeg" alt="Photo 3">
+                    <div class="polaroidCaption">Leg Day</div>
+                </div>
+
                 </div>
                 <div class="AboutText">
                     <h1>About Me</h1>
                     <p>I am an aspiring Year 3 AI and Data Engineering student from Nanyang Poly 
-                      with a strong passion towards Artificial intelligence. I have worked on projects 
+                      with a strong passion towards Artificial intelligence, Business Analytics, and Computing. I have worked on projects 
                       related to deep learning, computer vision, natural language processing and data preparation. </p>
                     <p>As a excellent team player with the ability to remain calm and communicate well during stressful situations,
                     I believe I will be a valuable asset to any team I work with. </p>
@@ -93,7 +110,7 @@
             </div>
             <div class="CTAResume">
                 <p>If you are interested in learning more about me, please do check out my resume!</p>
-                <a href="Documents/Resume (1).pdf" download class="Resumebutton">My Resume</a>
+                <a href="Documents/Marcus Teo Resume.pdf" download class="Resumebutton">My Resume</a>
             </div>
             <div class="aboutbutton">
                 <div class="text"><a href="#Myskills">Skills</a></div>
@@ -101,138 +118,255 @@
             </div>
         </section>
         <hr>
-        <section id="Myskills" class="page-section fade-in-section">
-            <h1>My Skills</h1>
-            <div class="cardgrid">
-              <div class="card" >
-                <img src="Images/Programming Languages.png">
-                <h3>Programming Languages</h3>
-                <p>Python, C++, HTML & CSS</p>
-              </div>
-              <div class="card">
-                <img src="Images/Machine Learning.png">
-                <h3>Machine Learning</h3>
-                <p>Creating and fine tuning models such as Ensemble (Random Forest, AdaBoost etc.)</p>
-              </div>
-              <div class="card">
-                <img src="Images/Deep Learning.png">
-                <h3>Deep Learning</h3>
-                <p>Creating and fine tuning models, Computer Vision and Natural Language Processing</p>
-              </div>
-              <div class="card">
-                <img src="Images/Data Preparation.png">
-                <h3>Data Preparation</h3>
-                <p>Cleaning, Preparing, Visualizing and Analysing Data with Power BI</p>
-              </div>
-              <div class="card">
-                <img src="Images/MachineLearning Tools.png">
-                <h3>Machine Learning Tools</h3>
-                <p>Use of Amazon Web Services and Microsoft Azure</p>
-              </div>
-              <div class="card">
-                <img src="Images/IoT.png">
-                <h3>Internet of Things</h3>
-                <p>Use of Arduino, Raspberry Pi etc.</p>
-              </div>
+        <section id="Skills" class="page-section fade-in-section">
+        <h1>My Skills</h1>
 
+        <div class="skillsBox" id="skillsBox">
+            <!-- Info panel shown when hovering a ball -->
+            <div class="skillInfo" id="skillInfo" aria-live="polite">
+            <div class="skillInfoTitle" id="skillInfoTitle">Hover a skill</div>
+            <div class="skillInfoDesc" id="skillInfoDesc">The bubble will pause and explain itself.</div>
             </div>
-            <a href="Documents/Resume (1).pdf" download class="Resumebutton">View my Resume for more skills!</a>
-            <div class="aboutbutton">
-                <div class="text"><a href="#Projects">Projects</a></div>
-                <div class="line"></div>
-            </div>
+
+            <!-- Balls -->
+            <button class="skillBall" type="button"
+            data-title="Programming Languages"
+            data-desc="Python, C++, HTML & CSS"
+            aria-label="Programming Languages">
+            <img src="Images/Programming Languages.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="Machine Learning"
+            data-desc="Training + fine-tuning models (Random Forest, AdaBoost, etc.)"
+            aria-label="Machine Learning">
+            <img src="Images/Machine Learning.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="Deep Learning"
+            data-desc="CV + NLP, CNN model training + transfer learning"
+            aria-label="Deep Learning">
+            <img src="Images/Deep Learning.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="Data Engineering"
+            data-desc="Pyspark, SQL, Pandas data cleaning, Power BI visualization and dashboarding."
+            aria-label="Data Engineering">
+            <img src="Images/Power BI.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="ML Tools"
+            data-desc="AWS + Azure"
+            aria-label="ML Tools">
+            <img src="Images/Azure no bg.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="Internet of Things and Robotics"
+            data-desc="Arduino, Raspberry Pi, M5Stack, ROS2 simulations"
+            aria-label="Internet of Things and Robotics">
+            <img src="Images/Arduino no bg.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="ML/DevOps"
+            data-desc="Docker, Kubernetes, Kedro Pipelines"
+            aria-label="ML/DevOps">
+            <img src="Images/Kubernetes.png" alt="" />
+            </button>
+
+            <button class="skillBall" type="button"
+            data-title="Web Developments"
+            data-desc="HTML, CSS, Flask, ReactNative etc."
+            aria-label="Web Developments">
+            <img src="Images/Web Design.png" alt="" />
+            </button>
+            <button class="skillBall" type="button"
+            data-title="Reinforcement Learning"
+            data-desc="Torch, built agents using MADDPG, PPO etc. etc."
+            aria-label="Reinforcement Learning">
+            <img src="Images/Reinforcement Learning.png" alt="" />
+            </button>
+        </div>
         </section>
         <hr>
         <section id="Projects" class="page-section fade-in-section">
-            <h1>My Projects</h1>
-            <div class="slideshowcontainer">
-                <div class="mySlides fade">
-                  <h2>Transport Classifier</h2>
-                  <div class="slidescontent">
-                    <img src="Images/Deep Learning Project.png">
-                    <ul class="slideswords">
-                        <li>
-                            My task was to create a transport classifier using 2 models- A CNN model and a Transfer Learning model.
-                        </li>
-                        <br>
-                        <li>
-                            We were given a dataset of 7500 images, with 3 classes- Automobiles, Airplanes and Trucks. 
-                        </li>
-                        <br>
-                        <li>
-                            I was able to get a train and test accuracy of 0.9232 and 0.9060 for my CNN model and 0.9945 and 0.9707 for my transfer learning model.
-                        </li>
-                    </ul>
-                  </div>
-                  <a href="HTML/ADLProject.html">Learn More</a>
-                </div>
-              
-                <div class="mySlides fade">
-                    <h2>Singapore's Tourism Analysis</h2>
-                    <div class="slidescontent">
-                        <ul class="slideswords">
-                            <li>
-                                Our task was to identify factors that will attract more tourists to Singapore, therefore increasing tourism reciept in Singapore.
-                            </li>
-                            <br>
-                            <li>
-                                My role was to create dashboards for visualisation, along with data analysis and report.
-                            </li>
-                        </ul>
-                      <img src="Images/DPV Project.png">
-                    </div>
-                    <a href="HTML/DPV Project.html">Learn More</a>
-                </div>
-              
-                <div class="mySlides fade">
-                    <h2>Leaf Sense</h2>
-                    <div class="slidescontent">
-                      <img src="Images/CV Project.png">
-                      <ul class="slideswords">
-                          <li>
-                              My group's goal was to create a computer vision model to identify defects in leaves.
-                          </li>
-                          <br>
-                          <li>
-                              While I helped out for the large majority of the project, such as in slides and model,
-                               my main task was to create a leaf detection model, separating the leaves from the background. 
-                          </li>
-                          <br>
-                          <li>
-                              By accomplishing the task, I was able to improve our model accuracy from 90% to 99.999%.
-                          </li>
-                      </ul>
-                    </div>
-                    <a href="HTML/CVProject.html">Learn More</a>
-                  </div>
+        <h1>My Projects</h1>
 
-                <a class="prev" onclick="plusSlides(-1)"><</a>
-                <a class="next" onclick="plusSlides(1)">></a>
-                
+        <div class="projectsRows">
+            <!-- Row 1 -->
+            <a class="projRow" href="https://github.com/Mocuss/Defector-Detector">
+            <div class="projRowTop">
+                <span class="projName">Defect Detector</span>
+                <span class="projPill">link</span>
             </div>
-            <div class="aboutbutton">
-                <div class="text"><a href="#Contact">Contact</a></div>
-                <div class="line"></div>
+
+            <div class="projRowExpand">
+                <div class="projCard">
+                <div class="projCardMedia">
+                    <img src="Images/Deep Learning Project.png" alt="Defect Detector preview" />
+                </div>
+
+                <div class="projCardText">
+                    <h2>Defect Detector | AI Engineering Project</h2>
+                    <ul>
+                    <li>Built a CV object detection system to spot defects in injection molded parts with Azure Custom Vision</li>
+                    <li>Self made dataset with data augmentation</li>
+                    <li>Deployed with a Flask App with HTML + CSS for real-time detection</li>
+                    <li>Power BI dashboard for logging and monitoring purposes</li>
+                    </ul>
+                </div>
+                </div>
             </div>
-              <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-                
-                function plusSlides(n) {
-                  showSlides(slideIndex += n);
-                }
-                
-                function showSlides(n) {
-                  let i;
-                  let slides = document.getElementsByClassName("mySlides");
-                  if (n > slides.length) {slideIndex = 1}    
-                  if (n < 1) {slideIndex = slides.length}
-                  for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                  }
-                  slides[slideIndex-1].style.display = "block";  
-                }
-                </script>
+            </a>
+
+            <!-- Row 2 -->
+            <a class="projRow" href="https://github.com/Mocuss/Data-Preparation-Project">
+            <div class="projRowTop">
+                <span class="projName">Singapore's Tourism Analysis</span>
+                <span class="projPill">link</span>
+            </div>
+
+            <div class="projRowExpand">
+                <div class="projCard">
+                <div class="projCardMedia">
+                    <img src="Images/DPV Project.png" alt="Tourism Analysis preview" />
+                </div>
+
+                <div class="projCardText">
+                    <h2>Singapore's Tourism Analysis | Data Preparation and Visualization Project</h2>
+                    <ul>
+                    <li>Analyzed Singapore tourism using public datasets to identify high tourist spend and recovery trends.</li>
+                    <li>Built interactive dashboards and visuals with Power BI.</li>
+                    <li>Cleaned, standardized and reshaped data for consistent analysis</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- Row 3 -->
+            <a class="projRow" href="https://github.com/Mocuss/LeafSense">
+            <div class="projRowTop">
+                <span class="projName">LeafSense</span>
+                <span class="projPill">link</span>
+            </div>
+
+            <div class="projRowExpand">
+                <div class="projCard">
+                <div class="projCardMedia">
+                    <img src="Images/CV Project.png" alt="LeafSense preview" />
+                </div>
+
+                <div class="projCardText">
+                    <h2>LeafSense | Computer Vision Project</h2>
+                    <ul>
+                    <li>Trained a densenet121 model to identify plant diseases with leaf images</li>
+                    <li>Added OpenCV image pre-processing step (HSV + Erosion) to remove background and reduce noise.</li>
+                    <li>Deployed an intuitive Flask app with HTML and CSS where users can upload image and receive predictions.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </a>
+
+            <!-- Row 4 -->
+            <a class="projRow" href="https://github.com/Mocuss/Skywatch">
+            <div class="projRowTop">
+                <span class="projName">Skywatch</span>
+                <span class="projPill">link</span>
+            </div>
+
+            <div class="projRowExpand">
+                <div class="projCard">
+                <div class="projCardMedia">
+                    <img src="Images/IoT Skywatch.png" alt="Skywatch preview" />
+                </div>
+
+                <div class="projCardText">
+                    <h2>Skywatch | IOT Project</h2>
+                    <ul>
+                    <li>Built a low cost IoT weather station that collects temperature, moisture and clouds images with a Raspberry pi processor</li>
+                    <li>Data uploaded to google sheets, and sent to Looker Studio dashboards and Blynk app for visualization</li>
+                    <li>Identified cloud features using K-means sky masking,.  HSV stats and edge detection metrics to utilize cloud data.</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            </a>
+        </div>
+        </section>
+        <hr>
+        <section id="Certifications" class="page-section fade-in-section">
+        <h1>Certifications</h1>
+
+        <div class="certBox">
+            <div class="certMarquee" aria-label="Certification gallery">
+                <div class="certDetails" id="certDetails" aria-live="polite">
+                <div class="certDetailsTitle" id="certDetailsTitle">Hover a certification</div>
+                <div class="certDetailsDesc" id="certDetailsDesc">It’ll show details here.</div>
+                </div>
+            <div class="certTrack">
+                <!-- 4 certs (duplicate them once so the loop feels continuous) -->
+                <a class="certCard" href="Documents/cert1.pdf" target="_blank" rel="noreferrer" data-title="Azure AI Fundamentals Certification"
+                data-desc="Core AI concepts and Azure AI services, such as machine learning basics, CV, NLP and responsible AI in real life scenarios, Jan 2025.">
+                <img src="Images/Certificates/AI900 cert.png" alt="Azure AI Fundamentals Certification">
+                <span>Azure AI Fundamentals</span>
+                </a>
+
+                <a class="certCard" href="Documents/cert2.pdf" target="_blank" rel="noreferrer" data-title="Associate AI Engineer"
+   data-desc="Understanding and building modular machine learning pipelines with kedro, Sep 2025.">
+                <img src="Images/Certificates/CAIE Cert.png" alt="Associate AI Engineer">
+                <span>Associate AI Engineer</span>
+                </a>
+
+                <a class="certCard" href="Documents/cert3.pdf" target="_blank" rel="noreferrer" data-title="Nvidia Fundamentals of Deep Learning"
+   data-desc="Understanding of neural networks and how to build a deep learning model, Jan 2025.">
+                <img src="Images/Certificates/Deep Learning cert.png" alt="Fundamentals of Deep Learning">
+                <span>Fundamentals of Deep Learning</span>
+                </a>
+
+                <a class="certCard" href="Documents/cert4.pdf" target="_blank" rel="noreferrer" data-title="AWS Cloud Practitioner"
+   data-desc="Understanding fundamentals of responsible AI,  ethical principles, and governance frameworks,Nov 2025">
+                <img src="Images/Certificates/AI Ethics and Governance.png" alt="Certification 4">
+                <span>SCS AI Ethics and Governance</span>
+                </a>
+
+                <!-- duplicate for seamless loop -->
+                <a class="certCard" href="Documents/cert1.pdf" target="_blank" rel="noreferrer" data-title="Azure AI Fundamentals Certification"
+   data-desc="Core AI concepts and Azure AI services, such as machine learning basics, CV, NLP and responsible AI in real life scenarios, Jan 2025.">
+                <img src="Images/Certificates/AI900 cert.png" alt="Azure AI Fundamentals Certification duplicate">
+                <span>Azure AI Fundamentals</span>
+                </a>
+
+                <a class="certCard" href="Documents/cert2.pdf" target="_blank" rel="noreferrer" data-title="Associate AI Engineer"
+   data-desc="Understanding and building modular machine learning pipelines with kedro, Sep 2025.">
+                <img src="Images/Certificates/CAIE Cert.png" alt="Associate AI Engineer duplicate">
+                <span>Associate AI Engineer</span>
+                </a>
+
+                <a class="certCard" href="Documents/cert3.pdf" target="_blank" rel="noreferrer" data-title="Nvidia Fundamentals of Deep Learning"
+   data-desc="Understanding of neural networks and how to build a deep learning model, Jan 2025.">
+                <img src="Images/Certificates/Deep Learning cert.png" alt="Fundamentals of Deep Learning duplicate">
+                <span>Fundamentals of Deep Learning</span>
+                </a>
+
+                <a class="certCard" href="Documents/cert4.pdf" target="_blank" rel="noreferrer" data-title="AI Ethics and Governance"
+   data-desc="Understanding fundamentals of responsible AI,  ethical principles, and governance frameworks,Nov 2025">
+                <img src="Images/Certificates/AI Ethics and Governance.png" alt="Certification 4 duplicate">
+                <span>SCS AI Ethics and Governance</span>
+                </a>
+            </div>
+            </div>
+        </div>
+
+        <div class="aboutbutton">
+            <div class="text"><a href="#Contact">Contact</a></div>
+            <div class="line"></div>
+        </div>
         </section>
         <hr>
         <section id="Contact" class="page-section fade-in-section">
@@ -296,7 +430,433 @@
           }, { threshold: 0.6 });
       
           navSections.forEach(section => navObserver.observe(section));
+
+                  // === 3. Projects notepad preview ===
+        // === 3. Projects notepad preview (GUARDED) ===
+        (() => {
+        const pad = document.getElementById("projectsPad");
+        if (!pad) return; // you're using the new .projRow layout, so skip
+
+        const rows = Array.from(pad.querySelectorAll(".projectRow"));
+        const titleEl = document.getElementById("previewTitle");
+        const imgEl = document.getElementById("previewImg");
+        const bulletsEl = document.getElementById("previewBullets");
+        const linkEl = document.getElementById("previewLink");
+
+        if (!rows.length || !titleEl || !imgEl || !bulletsEl || !linkEl) return;
+
+        function render(row){
+            titleEl.textContent = row.dataset.title || "";
+            imgEl.src = row.dataset.image || "";
+            linkEl.href = row.dataset.link || "#";
+
+            bulletsEl.innerHTML = "";
+            (row.dataset.bullets || "")
+            .split("|")
+            .map(s => s.trim())
+            .filter(Boolean)
+            .forEach(text => {
+                const li = document.createElement("li");
+                li.textContent = text;
+                bulletsEl.appendChild(li);
+            });
+        }
+
+        let locked = Math.max(0, rows.findIndex(r => r.classList.contains("is-active")));
+        function setActive(index){
+            locked = index;
+            rows.forEach((r,i) => r.classList.toggle("is-active", i === index));
+            render(rows[index]);
+        }
+
+        setActive(locked);
+
+        rows.forEach((row, i) => {
+            row.addEventListener("mouseenter", () => { if (i !== locked) render(row); });
+            row.addEventListener("mouseleave", () => render(rows[locked]));
+            row.addEventListener("click", () => setActive(i));
         });
+        })();
+
+            let locked = rows.findIndex(r => r.classList.contains("is-active"));
+            if (locked < 0) locked = 0;
+
+            function render(row){
+            titleEl.textContent = row.dataset.title || "";
+            imgEl.src = row.dataset.image || "";
+            linkEl.href = row.dataset.link || "#";
+
+            bulletsEl.innerHTML = "";
+            (row.dataset.bullets || "")
+                .split("|")
+                .map(s => s.trim())
+                .filter(Boolean)
+                .forEach(text => {
+                const li = document.createElement("li");
+                li.textContent = text;
+                bulletsEl.appendChild(li);
+                });
+            }
+
+            function setActive(index){
+            locked = index;
+            rows.forEach((r,i) => r.classList.toggle("is-active", i === index));
+            render(rows[index]);
+            }
+
+            // init
+            setActive(locked);
+
+            // hover preview (desktop), click locks (mobile-friendly)
+            rows.forEach((row, i) => {
+            row.addEventListener("mouseenter", () => { if (i !== locked) render(row); });
+            row.addEventListener("mouseleave", () => render(rows[locked]));
+            row.addEventListener("click", () => setActive(i));
+            });
+        
+        
+        
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+        // ===== Floating Skill Balls =====
+        const box = document.getElementById("skillsBox");
+        if (!box) return;
+
+        const balls = Array.from(box.querySelectorAll(".skillBall"));
+        const info = document.getElementById("skillInfo");
+        const infoTitle = document.getElementById("skillInfoTitle");
+        const infoDesc = document.getElementById("skillInfoDesc");
+        const RESTITUTION = 0.85;     // 1.0 = perfectly bouncy, 0.8 = softer
+        const KEEP_OUT_RADIUS = 100;  // px: how far inactive balls must stay from active ball center
+        const REPULSE_STRENGTH = 0.02; // how hard to push away each frame (tune)
+
+        // If user prefers reduced motion, don't animate
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduceMotion) {
+            // Just place them nicely (grid-ish) and still show hover info
+            balls.forEach((b, i) => {
+            b.style.transform = `translate(${40 + (i % 3) * 160}px, ${40 + Math.floor(i / 3) * 160}px)`;
+            b.addEventListener("mouseenter", () => showInfo(b));
+            b.addEventListener("focus", () => showInfo(b));
+            b.addEventListener("mouseleave", hideInfo);
+            b.addEventListener("blur", hideInfo);
+            });
+            return;
+        }
+
+        // State per ball
+        const state = balls.map((el) => ({
+            el,
+            x: 0, y: 0,
+            vx: (Math.random() * 0.8 + 0.3) * (Math.random() < 0.5 ? -1 : 1),
+            vy: (Math.random() * 0.8 + 0.3) * (Math.random() < 0.5 ? -1 : 1),
+            size: 110,
+            active: false,
+            targetX: null,
+            targetY: null
+        }));
+
+        function bounds() {
+            const rect = box.getBoundingClientRect();
+            return { w: rect.width, h: rect.height };
+        }
+
+        function placeInitial() {
+            const { w, h } = bounds();
+            state.forEach((s, i) => {
+            // Spread out initially
+            s.x = 30 + (i * 130) % (w - s.size - 60);
+            s.y = 30 + (Math.floor(i / 3) * 150) % (h - s.size - 60);
+            s.el.style.transform = `translate(${s.x}px, ${s.y}px)`;
+            });
+        }
+
+        function showInfo(ballEl) {
+            const title = ballEl.dataset.title || "Skill";
+            const desc = ballEl.dataset.desc || "";
+            infoTitle.textContent = title;
+            infoDesc.textContent = desc;
+            info.classList.add("is-visible");
+        }
+
+        function hideInfo() {
+            info.classList.remove("is-visible");
+        }
+
+        function setActiveBall(ballEl) {
+        state.forEach((s) => {
+            const isThis = s.el === ballEl;
+            s.active = isThis;
+            s.el.classList.toggle("is-active", isThis);
+
+            if (isThis) {
+            // Stay where it is: no target, stop movement
+            s.targetX = null;
+            s.targetY = null;
+            s.vx = 0;
+            s.vy = 0;
+            } else {
+            s.targetX = null;
+            s.targetY = null;
+            }
+        });
+
+        showInfo(ballEl);
+        }
+
+        function clearActiveBall(activeBall) {
+        const { w, h } = bounds();
+        const cx = w / 2, cy = h / 2;
+
+        state.forEach((s) => {
+            const wasActive = s.el === activeBall;
+            s.active = false;
+            s.targetX = null;
+            s.targetY = null;
+            s.el.classList.remove("is-active");
+
+            // Give the previously hovered ball a push AWAY from center
+            if (wasActive) {
+            const dx = s.x - cx;
+            const dy = s.y - cy;
+            const len = Math.max(1, Math.hypot(dx, dy));
+            s.vx = (dx / len) * 1.2 + (Math.random() - 0.5) * 0.3;
+            s.vy = (dy / len) * 1.2 + (Math.random() - 0.5) * 0.3;
+            }
+        });
+
+        hideInfo();
+        }
+
+        function getCenter(s) {
+        const r = s.size / 2;
+        return { cx: s.x + r, cy: s.y + r, r };
+        }
+
+        // Push inactive balls away from the active ball (so they don't block info)
+        function applyKeepOut(state) {
+        const active = state.find(s => s.active);
+        if (!active) return;
+
+        const A = getCenter(active);
+
+        state.forEach(s => {
+            if (s.active) return;
+
+            const B = getCenter(s);
+            const dx = B.cx - A.cx;
+            const dy = B.cy - A.cy;
+            const dist = Math.hypot(dx, dy) || 0.0001;
+
+            // Keep-out distance includes both radii
+            const minDist = KEEP_OUT_RADIUS + B.r;
+
+            if (dist < minDist) {
+            const nx = dx / dist;
+            const ny = dy / dist;
+
+            // Move it out immediately (pos correction)
+            const push = (minDist - dist);
+            s.x += nx * push;
+            s.y += ny * push;
+
+            // Add gentle velocity away so it doesn't come back instantly
+            s.vx += nx * (push * REPULSE_STRENGTH);
+            s.vy += ny * (push * REPULSE_STRENGTH);
+            }
+        });
+        }
+
+        // Ball-ball collision resolution (elastic-ish)
+        function resolveCollisions(state) {
+        for (let i = 0; i < state.length; i++) {
+            for (let j = i + 1; j < state.length; j++) {
+            const a = state[i];
+            const b = state[j];
+
+            const A = getCenter(a);
+            const B = getCenter(b);
+
+            const dx = B.cx - A.cx;
+            const dy = B.cy - A.cy;
+            const dist = Math.hypot(dx, dy) || 0.0001;
+
+            const minDist = A.r + B.r;
+
+            if (dist < minDist) {
+                const nx = dx / dist;
+                const ny = dy / dist;
+
+                // ---- Position correction (separate overlap) ----
+                const overlap = (minDist - dist);
+
+                // If one is active, treat it like "heavy": move only the inactive one
+                const aHeavy = a.active;
+                const bHeavy = b.active;
+
+                if (aHeavy && !bHeavy) {
+                b.x += nx * overlap;
+                b.y += ny * overlap;
+                } else if (!aHeavy && bHeavy) {
+                a.x -= nx * overlap;
+                a.y -= ny * overlap;
+                } else {
+                // split correction
+                a.x -= nx * overlap * 0.5;
+                a.y -= ny * overlap * 0.5;
+                b.x += nx * overlap * 0.5;
+                b.y += ny * overlap * 0.5;
+                }
+
+                // ---- Velocity response (bounce) ----
+                // relative velocity along normal
+                const rvx = b.vx - a.vx;
+                const rvy = b.vy - a.vy;
+                const velAlongNormal = rvx * nx + rvy * ny;
+
+                // If moving apart, don't bounce again
+                if (velAlongNormal > 0) continue;
+
+                // impulse magnitude (equal mass)
+                const e = RESTITUTION;
+                const jImpulse = -(1 + e) * velAlongNormal / 2;
+
+                // Apply impulse
+                if (a.active && !b.active) {
+                // bounce b off a
+                b.vx += jImpulse * nx * 2;
+                b.vy += jImpulse * ny * 2;
+                } else if (!a.active && b.active) {
+                // bounce a off b
+                a.vx -= jImpulse * nx * 2;
+                a.vy -= jImpulse * ny * 2;
+                } else {
+                a.vx -= jImpulse * nx;
+                a.vy -= jImpulse * ny;
+                b.vx += jImpulse * nx;
+                b.vy += jImpulse * ny;
+                }
+            }
+            }
+        }
+        }
+
+        // Hover/focus behavior
+        balls.forEach((b) => {
+            b.addEventListener("mouseenter", () => setActiveBall(b));
+            b.addEventListener("focus", () => setActiveBall(b));
+
+            b.addEventListener("mouseleave", () => clearActiveBall(b));
+            b.addEventListener("blur", () => clearActiveBall(b));
+        });
+
+        // Mobile: tap to pin/unpin (first tap pins, second tap unpins)
+        if (window.matchMedia("(hover: none)").matches) {
+            balls.forEach((b) => {
+            b.addEventListener("click", (e) => {
+                const isAlready = b.classList.contains("is-active");
+                e.preventDefault();
+                if (isAlready) clearActiveBall(b);
+                else setActiveBall(b);
+            });
+            });
+        }
+
+        // Animation loop
+        let last = performance.now();
+        function tick(now) {
+            const dt = Math.min(33, now - last); // clamp
+            last = now;
+
+            const { w, h } = bounds();
+
+            state.forEach((s) => {
+            if (s.active && s.targetX != null) {
+                // Glide to center using lerp (gentle)
+                const lerp = 0.10; // smaller = gentler
+                s.x += (s.targetX - s.x) * lerp;
+                s.y += (s.targetY - s.y) * lerp;
+                // stop velocity while active
+                s.vx *= 0.97;
+                s.vy *= 0.97;
+            } else {
+                // Normal float + slight random drift
+                s.vx += (Math.random() - 0.5) * 0.02;
+                s.vy += (Math.random() - 0.5) * 0.02;
+
+                // Limit speed
+                const max = 1.4;
+                s.vx = Math.max(-max, Math.min(max, s.vx));
+                s.vy = Math.max(-max, Math.min(max, s.vy));
+
+                s.x += s.vx * (dt / 16);
+                s.y += s.vy * (dt / 16);
+
+                // Bounce
+                if (s.x < 0) { s.x = 0; s.vx *= -1; }
+                if (s.y < 0) { s.y = 0; s.vy *= -1; }
+                if (s.x > w - s.size) { s.x = w - s.size; s.vx *= -1; }
+                if (s.y > h - s.size) { s.y = h - s.size; s.vy *= -1; }
+            }
+
+            });
+            applyKeepOut(state);
+            resolveCollisions(state);
+
+            // 3) draw
+            state.forEach((s) => {
+                s.el.style.transform = `translate(${s.x}px, ${s.y}px)`;
+            });
+
+            requestAnimationFrame(tick);
+        }
+
+        placeInitial();
+        requestAnimationFrame(tick);
+
+        // Keep bounds correct on resize
+        window.addEventListener("resize", () => placeInitial());
+        });
+
+        // ===== Certifications: hover shows details, click does nothing =====
+    document.addEventListener("DOMContentLoaded", () => {
+    const certMarquee = document.querySelector("#Certifications .certMarquee");
+    const certDetails = document.getElementById("certDetails");
+    const certTitle = document.getElementById("certDetailsTitle");
+    const certDesc  = document.getElementById("certDetailsDesc");
+    const certCards = Array.from(document.querySelectorAll("#Certifications .certCard"));
+
+    if (!certDetails || !certTitle || !certDesc || certCards.length === 0) return;
+
+    const show = (card) => {
+        certCards.forEach(c => c.classList.toggle("is-active", c === card));
+        certTitle.textContent =
+        card.dataset.title || card.querySelector("span")?.textContent || "Certification";
+        certDesc.textContent = card.dataset.desc || "";
+        certDetails.classList.add("is-visible");
+        certMarquee?.classList.add("is-paused");
+    };
+
+    const hide = () => {
+        certDetails.classList.remove("is-visible");
+        certMarquee?.classList.remove("is-paused");
+        certCards.forEach(c => c.classList.remove("is-active"));
+        // optional reset text:
+        // certTitle.textContent = "Hover a certification";
+        // certDesc.textContent = "It’ll show details here.";
+    };
+
+    certCards.forEach(card => {
+        card.addEventListener("mouseenter", () => show(card));
+        card.addEventListener("focus", () => show(card)); // keyboard accessibility
+
+        card.addEventListener("mouseleave", hide);
+        card.addEventListener("blur", hide);
+
+        // IMPORTANT: click does NOTHING (prevents navigation)
+        card.addEventListener("click", (e) => e.preventDefault());
+    });
+    });
       </script>
 </body>
 </html>
